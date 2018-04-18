@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Numero
     {
-        #region MAIN echo con Consola
+        #region MAIN sin WF (echo con Consola)
         //Console.Title = "Fecha de entrega viernes 20 abril.";
         //Calculadora calcu = new Calculadora();
         ////Colocar numeros a operar
@@ -44,8 +44,6 @@ namespace Entidades
         private double numero;
 
         public string SetNumero { set { this.numero = ValidarNumero(value); } }
-        
-        //Getter agregado solo para mostrar en main.
         public double GetNumero { get { return this.numero; } }
 
         public Numero()
@@ -62,6 +60,8 @@ namespace Entidades
 
         #endregion
 
+        #region Metodos y Sobrecargas
+
         #region Metodos
         public double ValidarNumero(string strNumero)
         {
@@ -72,8 +72,6 @@ namespace Entidades
                 //ValidarNumero comprobará que el valor recibido sea numérico,
                 //y lo retornará en formato double. Caso contrario, 
                 //retornará 0.
-               
-               
                 
                 devuelve = Convert.ToDouble(strNumero);
             }
@@ -129,11 +127,13 @@ namespace Entidades
         public string DecimalBinario(string numero)
         {
             double retorno;
-            //aca verificar si dentro del string num, hay numeros antes de usar el ToDouble porque sino
-            //si recibe un string con letras, rompe.
+            
             retorno = Convert.ToDouble(numero);
             return this.DecimalBinario(retorno); 
         }
+
+        #endregion
+
 
         #region Sobrecargas
 

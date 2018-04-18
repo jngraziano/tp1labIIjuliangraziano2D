@@ -8,8 +8,10 @@ namespace Entidades
 {
     public class Calculadora
     {
+        #region Metodo Operar y ValidarOperador
         public  double Operar(Numero num1, Numero num2, string operador)
         {
+            
             string rec = ValidarOperador(operador);
             double result = 0;
             switch (rec)
@@ -56,5 +58,9 @@ namespace Entidades
             }
             return devuelve;
         }
+
+        #endregion
+
+
     }
 }
