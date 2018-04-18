@@ -31,3 +31,14 @@ C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\MiCalculadora\obj
 C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.LaCalculadora.resources
 C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
 C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.Cache
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\bin\Debug\Graziano.Julian-TP1.dll
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\bin\Debug\Graziano.Julian-TP1.pdb
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.csprojResolveAssemblyReference.cache
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.LaCalculadora.resources
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\jgraziano\Desktop\tano10\tp1labII\Graziano.Julian-TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.Cache

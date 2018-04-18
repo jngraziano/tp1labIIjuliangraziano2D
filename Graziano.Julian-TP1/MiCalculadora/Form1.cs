@@ -61,6 +61,7 @@ namespace MiCalculadora
             const string mensaje = "Desea Salir?";
             const string titulo = "CERRAR";
             var result = MessageBox.Show(mensaje, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
@@ -78,7 +79,7 @@ namespace MiCalculadora
             {
                 const string mensaje = "Se necesita realizar una operación.";
                 const string titulo = "ERROR";
-                var result = MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK);
+                var result = MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
@@ -97,7 +98,7 @@ namespace MiCalculadora
             {
                 const string mensaje = "Se necesita realizar una operación.";
                 const string titulo = "ERROR";
-                var result = MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK);
+                var result = MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
