@@ -1,0 +1,22 @@
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.exe.config
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.exe
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.pdb
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.exe
+\\srvbuefs02\home\jgraziano\mis documentos\visual studio 2012\Projects\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.pdb
+C:\Users\alumno\Desktop\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.pdb
+C:\Users\alumno\Desktop\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.pdb
+C:\Users\alumno\Desktop\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll.config
+C:\Users\alumno\Desktop\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll
+C:\Users\alumno\Desktop\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.dll
+C:\Users\tano\Desktop\Tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll.config
+C:\Users\tano\Desktop\Tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll
+C:\Users\tano\Desktop\Tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.pdb
+C:\Users\tano\Desktop\Tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.dll
+C:\Users\tano\Desktop\Tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.pdb
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll.config
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.dll
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\bin\Debug\Graziano.Julian-TP1.pdb
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.dll
+C:\Users\jgraziano\Desktop\tano10\labII\TP\Graziano.Julian-TP1\Graziano.Julian-TP1\obj\Debug\Graziano.Julian-TP1.pdb
