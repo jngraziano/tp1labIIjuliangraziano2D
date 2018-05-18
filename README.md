@@ -1,2 +1,2 @@
-# Trabajo Practico 1 - Julian Graziano - 2 D - 2018
-TP 1 MiCalculadora
+# Trabajo Practico 2 - Julian Graziano - 2 D - 2018
+TP 2 Entidades
