@@ -1,2 +1,3 @@
-# Trabajo Practico 2 - Julian Graziano - 2 D - 2018
-TP 2 Entidades
+# Trabajos Practicos  - Julian Graziano - 2 D - 2018
+TP 02 - Recuperatorio
+TP 04
