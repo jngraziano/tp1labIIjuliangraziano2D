@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TP_04.Properties
+namespace MainCorreo.Properties
 {
 
 

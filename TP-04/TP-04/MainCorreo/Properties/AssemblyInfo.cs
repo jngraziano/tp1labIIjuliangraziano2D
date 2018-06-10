@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("TP-04")]
+[assembly: AssemblyTitle("MainCorreo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TP-04")]
+[assembly: AssemblyProduct("MainCorreo")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("abacd5e3-66a4-4cb8-938f-bc9b6b48814a")]
+[assembly: Guid("8fe87f96-0edf-405d-957a-7fc857a2ac79")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

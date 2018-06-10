@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TP_04
+namespace MainCorreo
 {
-    public partial class FrmPpal : Form
+    public partial class Form1 : Form
     {
-        public FrmPpal()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void FrmPpal_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

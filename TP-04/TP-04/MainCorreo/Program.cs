@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TP_04
+namespace MainCorreo
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace TP_04
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPpal());
+            Application.Run(new Form1());
         }
     }
 }

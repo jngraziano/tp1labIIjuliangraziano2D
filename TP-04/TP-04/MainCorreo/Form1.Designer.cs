@@ -1,6 +1,6 @@
-﻿namespace TP_04
+﻿namespace MainCorreo
 {
-    partial class FrmPpal
+    partial class Form1
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FrmPpal
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 357);
-            this.Name = "FrmPpal";
-            this.Text = "Correo UTN por Julian.Graziano.2D";
-            this.Load += new System.EventHandler(this.FrmPpal_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "Form1";
         }
 
         #endregion
