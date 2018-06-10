@@ -24,11 +24,11 @@ namespace Entidades
         public void FinEntregas()
         { }
 
-        public string MostrarDatos(IMostrar<List<Paquete>>elementos)
-        {}
+        //public string MostrarDatos(IMostrar<List<Paquete>>elementos)
+        //{}
 
-        public static Correo operator +(Correo c, Paquete p)
-        { }
+        //public static Correo operator +(Correo c, Paquete p)
+        //{ }
 
 
         #endregion
