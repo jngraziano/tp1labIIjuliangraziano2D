@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Paquete
+    class Paquete:IMostrar
     {
         enum EEstado
         {
