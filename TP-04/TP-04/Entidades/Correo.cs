@@ -10,7 +10,8 @@ namespace Entidades
     {
         #region Variables Propiedades Constructor
         private List<Paquete> paquetes;
-
+        //private List<Thread> mockPaquetes;
+        //List<Thread> ????
         
         public List<Paquete> Paquetes { get { return this.paquetes; } set { this.paquetes = value; } }
 

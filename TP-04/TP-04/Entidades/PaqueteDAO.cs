@@ -9,18 +9,31 @@ using System.Data;
 
 namespace Entidades
 {
+    /*
+     * Settings - tp4 
+     * Click derecho 
+     * Propiedades
+     * Settings
+     * Cadena Sting User loquequiera 
+     * Accedo:
+     * Properties.Settings.Default.Cadena
+     * 
+     * EJEMPLO EN GIT MOSTRADOENCLASE
+
+     */
     public static class PaqueteDAO
     {
         #region Variables y Constructor 
         private static SqlConnection Conexion;
         private static SqlCommand Comando;
 
-        private static string Conector = "Data Source=.\\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True";
+        //por variable:
+        //private static string Conector = "Data Source=.\\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True";
         private static string TablaNombre = "dbo.Paquetes";
 
         static PaqueteDAO()
         {
-            PaqueteDAO.Conexion = new SqlConnection(Conector);
+            PaqueteDAO.Conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
 
             PaqueteDAO.Comando = new SqlCommand();
 

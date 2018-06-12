@@ -19,20 +19,20 @@ namespace Entidades
         #endregion
 
         #region Variables, Propiedades y Constructor
-        private string direccionEn;
+        private string direccionEntrega;
         private EEstado estado;
-        private string trackid;
+        private string trackID;
 
 
-        public string DireccionEntrega { get { return this.direccionEn; } set { this.direccionEn = value; } }
+        public string DireccionEntrega { get { return this.direccionEntrega; } set { this.direccionEntrega = value; } }
         public EEstado Estado { get { return this.estado; } set { this.estado = value; } }
-        public string TrackingID { get { return this.trackid; } set { this.trackid = value; } }
+        public string TrackingID { get { return this.trackID; } set { this.trackID = value; } }
 
         public Paquete()
         { }
-        public Paquete(string direccionEntrega, string trackingID)
+        public Paquete(string direccionEntregatrega, string trackingID)
         {
-            this.DireccionEntrega = direccionEntrega;
+            this.DireccionEntrega = direccionEntregatrega;
             this.TrackingID = trackingID;
         }
 

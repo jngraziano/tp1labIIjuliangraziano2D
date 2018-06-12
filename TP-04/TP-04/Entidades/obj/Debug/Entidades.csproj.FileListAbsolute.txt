@@ -2,3 +2,9 @@ C:\Users\tano\Desktop\Tano10\TP\TP-04\TP-04\Entidades\bin\Debug\Entidades.dll
 C:\Users\tano\Desktop\Tano10\TP\TP-04\TP-04\Entidades\bin\Debug\Entidades.pdb
 C:\Users\tano\Desktop\Tano10\TP\TP-04\TP-04\Entidades\obj\Debug\Entidades.dll
 C:\Users\tano\Desktop\Tano10\TP\TP-04\TP-04\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\bin\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\bin\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\obj\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp\TP-04\TP-04\Entidades\obj\Debug\Entidades.pdb

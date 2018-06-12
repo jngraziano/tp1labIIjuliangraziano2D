@@ -28,3 +28,8 @@ C:\Users\tano\Desktop\Tano10\TP2\TP-02 Recuperatorio\Entidades\bin\Debug\Entidad
 C:\Users\tano\Desktop\Tano10\TP2\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\tano\Desktop\Tano10\TP2\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.dll
 C:\Users\tano\Desktop\Tano10\TP2\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\Entidades\bin\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\Entidades\bin\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\Entidades\obj\Debug\Entidades.pdb
