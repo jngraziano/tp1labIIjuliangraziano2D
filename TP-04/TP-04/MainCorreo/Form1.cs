@@ -31,6 +31,8 @@ namespace MainCorreo
            
 
             /*FIJARSE COMO MOSTRAR LOS DATOS DE LA BASE EN UN RICHTEXTBOX
+             * 
+             * ACTUALIZADO: FIJARSE SI NO HAY QUE MOSTRARLOS DESDE EL TXT
             */
             //rtbMostrar.Clear();
 
@@ -59,13 +61,8 @@ namespace MainCorreo
         }
 
         private void rtbMostrar_TextChanged(object sender, EventArgs e)
-        {
-
-           
-            
-            
-        }
-
+        { }
+       
        
 
       
