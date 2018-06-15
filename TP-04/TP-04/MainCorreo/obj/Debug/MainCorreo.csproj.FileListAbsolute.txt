@@ -12,3 +12,6 @@ C:\Users\tano\Desktop\Tano10\TP\TP-04\TP-04\MainCorreo\obj\Debug\MainCorreo.pdb
 C:\Users\alumno\Desktop\tp\TP-04\TP-04\MainCorreo\bin\Debug\MainCorreo.exe.config
 C:\Users\alumno\Desktop\tp\TP-04\TP-04\MainCorreo\obj\Debug\MainCorreo.exe
 C:\Users\alumno\Desktop\tp\TP-04\TP-04\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-04\TP-04\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-04\TP-04\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-04\TP-04\MainCorreo\obj\Debug\MainCorreo.pdb

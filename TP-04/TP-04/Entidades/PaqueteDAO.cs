@@ -18,18 +18,30 @@ namespace Entidades
      * Accedo:
      * Properties.Settings.Default.Cadena
      * 
-     * EJEMPLO EN GIT MOSTRADOENCLASE
+     *  EJEMPLO EN GIT MOSTRADOENCLASE
+       
+     * Si quiero conectar por variable:
+        private static string Conector = "Data Source=.\\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True";
+        
+     */
 
+    /*CONSIGNA DE LA CLASE:
+     * 
+     *  De surgir cualquier error con la carga de datos, se deberá lanzar una excepción tantas veces como sea
+        necesario hasta llegar a la vista (formulario). A través de un MessageBox informar lo ocurrido al
+        usuario de forma clara.
+     * 
+     * 
+     * 
      */
     public static class PaqueteDAO
     {
         #region Variables y Constructor 
         private static SqlConnection Conexion;
         private static SqlCommand Comando;
-
-        //por variable:
-        //private static string Conector = "Data Source=.\\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True";
         private static string TablaNombre = "dbo.Paquetes";
+
+       
 
         static PaqueteDAO()
         {
@@ -48,53 +60,13 @@ namespace Entidades
 
         public static bool Insertar(Paquete p)
         {
-            string sql = "INSERT INTO " + TablaNombre + "(direccionEntrega,trackingID,alumno) VALUES(";
-            sql = sql + "'" + p.DireccionEntrega + "','" + p.TrackingID + "'," + "Julian Graziano" + ")";
-
-
-
-            return PaqueteDAO.EjecutarNonQuery(sql);
- 
-        }
-
-        public static Paquete ObtenerPaquete()
-        {
             bool flag = false;
-            Paquete paque1 = null;
-
-
             try
             {
-                PaqueteDAO.Comando.CommandText = "select * from " + TablaNombre + " where (id = 1);";
-                PaqueteDAO.Conexion.Open();
+                string query = "INSERT INTO " + TablaNombre + "(direccionEntrega,trackingID,alumno) VALUES(";
+                query = query + "'" + p.DireccionEntrega + "','" + p.TrackingID + "'," + "Julian Graziano" + ")";
 
-                SqlDataReader oDr = PaqueteDAO.Comando.ExecuteReader();
-
-                if (oDr.Read())
-                {
-                    paque1 = new Paquete(oDr["DireccionEntrega"].ToString(), oDr["TrackingID"].ToString());
-                    
-                }
-                oDr.Close();
-                flag = true;
-
-            }
-            catch (Exception e)
-            {
-                
-                throw e;
-            }
-
-            return paque1;
-        }
-
-        public static bool EjecutarNonQuery(string consulta)
-        {
-            bool flag = false;
-
-            try
-            {
-                PaqueteDAO.Comando.CommandText = consulta;
+                PaqueteDAO.Comando.CommandText = query;
 
                 PaqueteDAO.Conexion.Open();
 
@@ -102,27 +74,74 @@ namespace Entidades
 
                 flag = true;
 
+
             }
             catch (Exception)
             {
                 flag = false;
-
+                //throw e;
             }
             finally
             {
                 if (flag)
                 {
                     PaqueteDAO.Conexion.Close();
-                    
                 }
-            }
-
-            return flag;
  
+            }
+            
+            return flag;
+
         }
 
+        #region Otras querys
+
+        #region ObtenerPaquete
+        //public static Paquete ObtenerPaquete(int ID)
+        //{
+        //    bool flag = false;
+        //    Paquete paque1 = null;
+
+
+        //    try
+        //    {
+        //      PaqueteDAO.Comando.CommandText = "select * from " + TablaNombre + " where (id = " + ID.toString() + ");";
+        //      PaqueteDAO.Conexion.Open();
+
+        //        SqlDataReader oDr = PaqueteDAO.Comando.ExecuteReader();
+
+        //        if (oDr.Read())
+        //        {
+        //            paque1 = new Paquete(oDr["DireccionEntrega"].ToString(), oDr["TrackingID"].ToString());
+                    
+        //        }
+        //        oDr.Close();
+        //        flag = true;
+
+        //    }
+        //    catch (Exception e)
+        //    {
+                
+        //        throw e;
+        //    }
+
+        //    return paque1;
+        //}
+
+        #endregion
+
+        #region Para updatear un campo
+        //EJEMPLO EN ESTE CASO:
+        //update dbo.Paquetes SET alumno= 'JulianGraziano' where id = 1;
+
+        #endregion
 
 
         #endregion
+
+
+        #endregion
+
+
     }
 }

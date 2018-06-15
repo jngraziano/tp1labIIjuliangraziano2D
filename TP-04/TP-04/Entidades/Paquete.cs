@@ -53,9 +53,13 @@ namespace Entidades
 
             return sb.ToString();
         }
+        
+        
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
             StringBuilder sb = new StringBuilder();
+
+            string.Format 
 
 
 

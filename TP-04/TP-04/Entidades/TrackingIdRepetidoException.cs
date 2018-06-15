@@ -22,7 +22,7 @@ namespace Entidades
         public TrackingIdRepetidoException(string message) 
             : base(message) 
         {
-            message = "Error, Track ID repetido.";
+            message = "Error, Track ID repetido?.";
         }
 
         public TrackingIdRepetidoException(string message, Exception inner) 

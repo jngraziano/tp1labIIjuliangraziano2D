@@ -32,9 +32,9 @@ namespace Entidades
            
         }
 
-        public override string String()
-        {
-            return "asd";
-        }
+        //public override string String()
+        //{
+        //    return "asd";
+        //}
     }
 }
