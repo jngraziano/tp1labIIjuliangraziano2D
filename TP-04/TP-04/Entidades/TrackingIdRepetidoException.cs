@@ -22,13 +22,13 @@ namespace Entidades
         public TrackingIdRepetidoException(string message) 
             : base(message) 
         {
-            message = "Error, Track ID repetido?.";
+           
         }
 
         public TrackingIdRepetidoException(string message, Exception inner) 
             : base(message, inner) 
         {
-            message = inner.InnerException.ToString();
+           
          
         }
         

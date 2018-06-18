@@ -54,3 +54,11 @@ C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\TP-02\bin\Debug\TP-02.pdb
 C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\TP-02\bin\Debug\Entidades.dll
 C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\TP-02\bin\Debug\Entidades.pdb
 C:\Users\alumno\Desktop\tp\TP-02 Recuperatorio\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\obj\Debug\TP-02.exe
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\obj\Debug\TP-02.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\bin\Debug\TP-02.exe
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\bin\Debug\TP-02.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\bin\Debug\Entidades.dll
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\bin\Debug\Entidades.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\TP-02 Recuperatorio\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache

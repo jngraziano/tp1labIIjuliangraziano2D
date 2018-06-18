@@ -16,18 +16,18 @@ namespace MainCorreo
     {
         public FrmPrincipal()
         {
-            Paquete paquete1 = new Paquete();
-            paquete1 = PaqueteDAO.ObtenerPaquete();
+            //Paquete paquete1 = new Paquete();
+            //paquete1 = PaqueteDAO.ObtenerPaquete();
 
-            try
-            {
-                label1.Text = paquete1.MostrarDatos();
-            }
-            catch (Exception ex)
-            {
+            //try
+            //{
+            //    label1.Text = paquete1.MostrarDatos();
+            //}
+            //catch (Exception ex)
+            //{
                 
-                throw ex;
-            }
+            //    throw ex;
+            //}
            
 
             /*FIJARSE COMO MOSTRAR LOS DATOS DE LA BASE EN UN RICHTEXTBOX

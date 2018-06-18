@@ -8,11 +8,10 @@ namespace Entidades
 {
     public static class GuardaString
     {
-       
-        public static bool Guardar(this string text, string archivo)
-        {
-            //(archivosTexto.Guardar(rutaArchivoTexto, new Item("Olga", 32, 1.5f).ToString())
 
+        public static bool Guardar(this String text, string archivo)
+        {
+            
             try
             {
                 //text
@@ -20,11 +19,12 @@ namespace Entidades
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(archivo, true))
                 {
                     file.WriteLine(text);
+                    file.Close();
                 }
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
