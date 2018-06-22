@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Correo.cs" />
     <Compile Include="GuardaString.cs" />
     <Compile Include="IMostrar.cs" />

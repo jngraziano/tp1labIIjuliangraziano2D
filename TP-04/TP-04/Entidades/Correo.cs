@@ -9,17 +9,30 @@ namespace Entidades
 {
     public class Correo : IMostrar<List<Paquete>>
     {
-        #region Variables Propiedades Constructor
+        #region Atributos y Propiedades
 
         private List<Thread> mockPaquetes;
         private List<Paquete> paquetes;
         
         
-        public List<Paquete> Paquetes { get { return this.paquetes; } set { this.paquetes = value; } }
+        public List<Paquete> Paquetes 
+        { 
+            get { return this.paquetes; }
+            set
+            {
+                if (value != null)
+                {
+                    this.paquetes = value; 
+                }
+            } 
+        }
+        #endregion
 
+        #region Constructor
         public Correo()
         { 
             this.Paquetes = new List<Paquete>();
+
             this.mockPaquetes = new List<Thread>();
         }
 
@@ -29,44 +42,65 @@ namespace Entidades
 
         public void FinEntregas()
         {
-            foreach (Thread aux in this.mockPaquetes)
+            for (int i = 0; i < mockPaquetes.Count; i++)
             {
-                if (aux.IsAlive)
-                    aux.Abort();
+                mockPaquetes[i].Abort();
+                mockPaquetes.RemoveAt(i);
             }
-            //Environment.Exit(Environment.ExitCode);
-
-            //WTF
         }
 
-        public string MostrarDatos(IMostrar<List<Paquete>> elementos)
+        //llamo al mostrar datos de la interfaz
+        string IMostrar<List<Paquete>>.MostrarDatos(IMostrar<List<Paquete>> elemento)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (Paquete aux in (List<Paquete>)elementos)
+            string devuelve = "";
+            foreach (Paquete item in ((Correo)elemento).Paquetes)
             {
-                sb.AppendFormat("{0} para {1} ({2})", aux.TrackingID, aux.DireccionEntrega,
-                aux.Estado.ToString());
+                devuelve += string.Format("{0} para {1} (Estado: {2})\n", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
             }
-            return sb.ToString();
+
+            return devuelve;
         }
+
+
+   
 
         #endregion
 
-        #region Operadores
+        #region Operador +
         public static Correo operator +(Correo c, Paquete p)
         {
-            foreach (Paquete item in c.Paquetes)
+            bool flag = false;
+
+            //no es nulo
+            if (p != null)
             {
-                if (item == p)
+                foreach (Paquete item in c.Paquetes)
                 {
-                    throw new TrackingIdRepetidoException("El paquete se encuentra repetido.");
+                    if (item == p)
+                    {
+                        flag = true;
+                        string mensajeException = "El paquete con tracking ID:" + p.TrackingID + " ya fue enviado previamente.";
+                        
+                        TrackingIdRepetidoException excep = new TrackingIdRepetidoException(mensajeException);
+                        throw excep; 
+                    }
                 }
-                   
+
+                if (flag == false)
+                {
+                    c.Paquetes.Add(p);
+                    try
+                    {
+                        Thread hiloParaPaquete = new Thread(p.MockClicloDeVida);
+                        c.mockPaquetes.Add(hiloParaPaquete);
+                        hiloParaPaquete.Start();
+                    }
+                    catch (Exception excep)
+                    {
+                        throw excep;
+                    }
+                }
             }
-            c.Paquetes.Add(p);
-            Thread hiloMock = new Thread(p.MockClicloDeVida);
-            c.mockPaquetes.Add(hiloMock);
-            hiloMock.Start();
             return c;
         }
 

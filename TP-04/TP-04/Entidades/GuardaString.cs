@@ -3,38 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Entidades
 {
     public static class GuardaString
     {
 
-        public static bool Guardar(this String text, string archivo)
+        public static bool Guardar(this String texto, string archivo)
         {
-            
+            bool flag = false;
             try
             {
-                //text
-                //Si el archivo existe agregarà informaciòn en el.
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(archivo, true))
-                {
-                    file.WriteLine(text);
-                    file.Close();
-                }
+                string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + archivo;
 
-                return true;
+                StreamWriter txt = new StreamWriter(ruta, true);
+                txt.WriteLine(texto);
+                txt.Close();               
+                               
+                flag = true;
             }
-            catch (Exception e)
+            catch (Exception excep)
             {
-                return false;
+                throw excep;
+
             }
-            
+
+            return flag; 
            
         }
 
-        //public override string String()
-        //{
-        //    return "asd";
-        //}
+      
     }
 }

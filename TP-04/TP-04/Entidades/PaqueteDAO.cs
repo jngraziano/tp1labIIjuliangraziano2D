@@ -9,7 +9,9 @@ using System.Data;
 
 namespace Entidades
 {
+    #region Explicación usar Settings
     /*
+     * Como predefinir Properties.Settings.Default.Loquesea y usarlo de default: 
      * Settings - tp4 
      * Click derecho 
      * Propiedades
@@ -25,33 +27,25 @@ namespace Entidades
         
      */
 
-    /*CONSIGNA DE LA CLASE:
-     * 
-     *  De surgir cualquier error con la carga de datos, se deberá lanzar una excepción tantas veces como sea
-        necesario hasta llegar a la vista (formulario). A través de un MessageBox informar lo ocurrido al
-        usuario de forma clara.
-     * 
-     * 
-     * 
-     */
+    #endregion
+
+
     public static class PaqueteDAO
     {
-        #region Variables y Constructor 
+        #region Atributos y Constructor 
         private static SqlConnection Conexion;
         private static SqlCommand Comando;
-        private static string TablaNombre = "dbo.Paquetes";
-
-       
+        private static string TablaNombre = "Paquetes";
 
         static PaqueteDAO()
         {
-            PaqueteDAO.Conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+            Conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
 
-            PaqueteDAO.Comando = new SqlCommand();
+            Comando = new SqlCommand();
+            
+            Comando.CommandType = System.Data.CommandType.Text;// tipo de comando
 
-            PaqueteDAO.Comando.CommandType = System.Data.CommandType.Text;
-
-            PaqueteDAO.Comando.Connection = PaqueteDAO.Conexion;
+            Comando.Connection = Conexion; 
         }
 
         #endregion
@@ -61,32 +55,36 @@ namespace Entidades
         public static bool Insertar(Paquete p)
         {
             bool flag = false;
+
+            //Creo el string query
+            string query = "INSERT INTO "+ TablaNombre +" (direccionEntrega,trackingID,alumno) VALUES(";
+            query += "'" + p.DireccionEntrega + "','" + p.TrackingID + "', 'JulianGraziano')";
+
             try
             {
-                string query = "INSERT INTO " + TablaNombre + "(direccionEntrega,trackingID,alumno) VALUES(";
-                query = query + "'" + p.DireccionEntrega + "','" + p.TrackingID + "'," + "Julian Graziano" + ")";
+                Comando.CommandText = query;// le paso la query
 
-                PaqueteDAO.Comando.CommandText = query;
+                Conexion.Open();//abro la conexion
 
-                PaqueteDAO.Conexion.Open();
-
-                PaqueteDAO.Comando.ExecuteNonQuery();
+                int data = Comando.ExecuteNonQuery();
+                if (data == 1)
+                {
+                    flag = true;
+                }
+                Conexion.Close();
 
                 flag = true;
 
 
             }
-            catch (Exception)
+            catch (SqlException excep)
             {
                 flag = false;
-                //throw e;
+                throw excep;
             }
             finally
             {
-                if (flag)
-                {
-                    PaqueteDAO.Conexion.Close();
-                }
+                    Conexion.Close();
  
             }
             

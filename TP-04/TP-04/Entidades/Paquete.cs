@@ -7,13 +7,9 @@ using System.Threading;
 
 namespace Entidades
 {
-    public class Paquete:IMostrar<Paquete>
-    {
         #region Eventos
-        // Delegado del evento
-        public delegate void DelegadoEstado(); //ver parametros
-        // Evento del tipo del delegado
-        public event DelegadoEstado EventoQueGenera;
+        // Creo delegado del evento
+        public delegate void DelegadoEstado(object sender, EventArgs e);
 
         #endregion
 
@@ -27,105 +23,97 @@ namespace Entidades
         }
         #endregion
 
-        #region Variables, Propiedades y Constructor
+    public class Paquete:IMostrar<Paquete>
+    {
+
+
+        #region Atributos y Propiedades
         private string direccionEntrega;
         private EEstado estado;
         private string trackingID;
+        public event DelegadoEstado EventoGenerado;// Evento del tipo del delegado
+        public Exception HayExcepcion = null;
 
 
         public string DireccionEntrega { get { return this.direccionEntrega; } set { this.direccionEntrega = value; } }
         public EEstado Estado { get { return this.estado; } set { this.estado = value; } }
         public string TrackingID { get { return this.trackingID; } set { this.trackingID = value; } }
+        #endregion
 
-        public Paquete()
-        { }
+        #region Constructor
+        
         public Paquete(string direccionEntregatrega, string trackingID)
         {
             this.DireccionEntrega = direccionEntregatrega;
             this.TrackingID = trackingID;
             this.Estado = EEstado.Ingresado;
-            this.EventoQueGenera += InformaEstado;
         }
 
         #endregion
 
-       
-
         #region Metodos
         public void MockClicloDeVida()
         {
-            do
+            Thread.Sleep(10000);
+            this.Estado = EEstado.EnViaje;
+            //INFORMAR ESTADO MEDIANTE EVENTO
+            EventArgs a = new EventArgs();
+            this.EventoGenerado.Invoke(this, a);
+            Thread.Sleep(10000);
+            this.Estado = EEstado.Entregado;
+            //INFORMAR ESTADO MEDIANTE EVENTO
+            this.EventoGenerado.Invoke(this, a);
+
+            bool resp = PaqueteDAO.Insertar(this);
+            if (resp == false)
             {
-                Thread.Sleep(10000);
-
-                this.Estado = EEstado.EnViaje;
-                this.InformaEstado();
-
-
-
-
-                this.Estado = (this.Estado == EEstado.Ingresado) ? EEstado.EnViaje : EEstado.Entregado;
-                EventoQueGenera();
-
-            } while (Estado != EEstado.Entregado);
-            //falta guardar paquete en base de datos con evento
-
-            //???
-        }       
-        
-        public string MostrarDatos(IMostrar<Paquete> elemento)
-        {
-            return String.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
-            //ver esto
-
+                Exception excep = new Exception("Se encontró un problema al querer guardan en la base de datos.");
+                throw excep;
+            }
         }
 
-        /// <summary>
-        /// Generará un evento en el tiempo dado en el constructor
-        /// </summary>
-        public void InformaEstado()
-        {
 
+        string IMostrar<Paquete>.MostrarDatos(IMostrar<Paquete> elemento)
+        {
+            string devuelve = "";
+            //si no es nulo.
+            if (elemento != null)
+            {
+                devuelve = string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
+            }
+            return devuelve;
         }
 
+       
         #endregion
 
         #region Operadores y Sobrecargas
         public static bool operator ==(Paquete p1, Paquete p2)
         {
             
-            //bool rta = false;
-            //if (p1.TrackingID == p2.TrackingID)
-            //{
-            //    rta = true;
-            //}
+            bool rta = false;
 
-            //return rta;
-
-
-
-            if (ReferenceEquals(p1, null) || ReferenceEquals(p2, null))
-            { return false; }
+            if ((object)p1 != null && (object)p2 != null)
+            {
+                if (p1.TrackingID == p2.TrackingID)
+                {
+                    rta = true;
+                }
+            }
                 
-            return (p1.TrackingID == p2.TrackingID);
+            return rta;
         }
 
 
         public static bool operator !=(Paquete p1, Paquete p2)
         { return !(p1 == p2); }
 
-        public override bool Equals(object obj)
-        {
-            return this == (Paquete)obj;
-        }
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+       
 
         public override string ToString()
         {
-            return MostrarDatos(this);
+            return ((IMostrar<Paquete>)this).MostrarDatos(this);
+           
         }
 
 

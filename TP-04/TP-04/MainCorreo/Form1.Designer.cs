@@ -1,6 +1,6 @@
 ﻿namespace MainCorreo
 {
-    partial class FrmPrincipal
+    partial class FrmPpal
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -170,10 +170,10 @@
             // mtxtTrackingID
             // 
             this.mtxtTrackingID.Location = new System.Drawing.Point(11, 44);
+            this.mtxtTrackingID.Mask = "000-000-0000";
             this.mtxtTrackingID.Name = "mtxtTrackingID";
             this.mtxtTrackingID.Size = new System.Drawing.Size(178, 20);
             this.mtxtTrackingID.TabIndex = 8;
-            this.mtxtTrackingID.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtTrackingID_MaskInputRejected);
             // 
             // lvlTrackingID
             // 
@@ -191,12 +191,12 @@
             this.rtbMostrar.Size = new System.Drawing.Size(474, 235);
             this.rtbMostrar.TabIndex = 7;
             this.rtbMostrar.Text = "";
-            this.rtbMostrar.TextChanged += new System.EventHandler(this.rtbMostrar_TextChanged);
             // 
             // cmsListas
             // 
             this.cmsListas.Name = "cmsListas";
-            this.cmsListas.Size = new System.Drawing.Size(153, 26);
+            this.cmsListas.Size = new System.Drawing.Size(61, 4);
+            this.cmsListas.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -206,7 +206,7 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 11;
             // 
-            // FrmPrincipal
+            // FrmPpal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,7 +215,9 @@
             this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmPrincipal";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmPpal";
             this.Text = "Correo UTN por Julian.Graziano.2D";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
