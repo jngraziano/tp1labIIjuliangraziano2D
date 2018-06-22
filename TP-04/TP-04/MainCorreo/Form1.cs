@@ -13,39 +13,13 @@ namespace MainCorreo
 {
     public partial class FrmPpal : Form
     {
-        #region Comments
-        /*
-             * 
-             * Paquete paquete1 = new Paquete();
-             * paquete1 = PaqueteDAO.ObtenerPaquete();
-             * try
-             * {
-                label1.Text = paquete1.MostrarDatos();
-               }
-              catch (Exception ex)
-              {
-                
-                throw ex;
-              }
-             * 
-            FIJARSE COMO MOSTRAR LOS DATOS DE LA BASE EN UN RICHTEXTBOX
-             
-            ACTUALIZADO: FIJARSE SI NO HAY QUE MOSTRARLOS DESDE EL TXT
-           
-            rtbMostrar.Clear();
-            rtbMostrar.Document.Blocks.Clear();
-            richTextBox1.Document.Blocks.Add(new Paragraph(new Run("Text")));
-            */
-        #endregion
-
         #region Atributos y Constructor
 
         private Correo correo;
 
         public FrmPpal()
         {
-            //Instancio el correo (fijarse si usar this o no)
-           
+                      
             InitializeComponent();
             correo = new Correo();
         }
@@ -61,10 +35,11 @@ namespace MainCorreo
             {
 
                 Paquete PaqueteAux = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
-                PaqueteAux.EventoGenerado += new DelegadoEstado(this.paq_InformaEstado); //asocio evento con metodo 
+                PaqueteAux.EventoGenerado += new DelegadoEstado(this.paq_InformaEstado);
 
-                //Agrego PaqueteAux a correo
+                //Agrego PaqueteAux a correo usando la sobrecarga del + y del ==
                 this.correo += PaqueteAux;
+                
             }
             catch (Exception excep)
             {
@@ -77,10 +52,11 @@ namespace MainCorreo
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            //Lo limpio
+            //limpio el rtb
             rtbMostrar.Text = "";
 
-            //Muestro
+            //Muestro lo que hay en tiempo de ejecucion en la lista
+           
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
@@ -113,25 +89,7 @@ namespace MainCorreo
             lstEstadoEnViaje.Items.Clear();
             lstEstadoEntregado.Items.Clear();
 
-            //USANDO .TEXT
-
-            //foreach (Paquete aux in this.correo.Paquetes)
-            //{
-            //    switch (aux.Estado)
-            //    {
-            //        case EEstado.Ingresado:
-            //            lstEstadoIngresado.Text = aux.ToString();
-            //            break;
-            //        case EEstado.EnViaje:
-            //            lstEstadoEnViaje.Text = aux.ToString();
-            //            break;
-            //        case EEstado.Entregado:
-            //            lstEstadoIngresado.Text = aux.ToString();
-            //            break;
-            //    }
-            //}
-
-            //USANDO .ITEMS.ADD
+            //USO .ITEMS.ADD
             if (this.correo != null)
             {
                 foreach (var item in this.correo.Paquetes)
@@ -146,24 +104,26 @@ namespace MainCorreo
                             break;
                         case EEstado.Entregado:
                             lstEstadoEntregado.Items.Add(item);
+                            
+                            //limpio txtbox y lst
+                            txtDireccion.Clear();
+                            mtxtTrackingID.Clear();
+                            lstEstadoEntregado.Items.Clear();
+
                             break;
                         default:
                             break;
                     }
                 }
                 
-            }
-                
-		
-	        
-	       
+            }  
             
         }
 
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             rtbMostrar.Text = "";
-            //if (!(Object.ReferenceEquals(elemento,null)))
+           
             if (elemento != null)
             {
                 rtbMostrar.Text = (elemento.MostrarDatos(elemento)).ToString();
@@ -191,6 +151,11 @@ namespace MainCorreo
 
 
         #endregion
+
+        private void FrmPpal_Load(object sender, EventArgs e)
+        {
+
+        }
         
         #endregion
 

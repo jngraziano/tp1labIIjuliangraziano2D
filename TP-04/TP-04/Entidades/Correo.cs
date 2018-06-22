@@ -20,6 +20,7 @@ namespace Entidades
             get { return this.paquetes; }
             set
             {
+                //Verifico que no sea null antes de asignar
                 if (value != null)
                 {
                     this.paquetes = value; 
@@ -31,6 +32,7 @@ namespace Entidades
         #region Constructor
         public Correo()
         { 
+            //Instancio las dos listas
             this.Paquetes = new List<Paquete>();
 
             this.mockPaquetes = new List<Thread>();
@@ -39,15 +41,6 @@ namespace Entidades
         #endregion
 
         #region Metodos
-
-        public void FinEntregas()
-        {
-            for (int i = 0; i < mockPaquetes.Count; i++)
-            {
-                mockPaquetes[i].Abort();
-                mockPaquetes.RemoveAt(i);
-            }
-        }
 
         //llamo al mostrar datos de la interfaz
         string IMostrar<List<Paquete>>.MostrarDatos(IMostrar<List<Paquete>> elemento)
@@ -61,6 +54,14 @@ namespace Entidades
             return devuelve;
         }
 
+        public void FinEntregas()
+        {
+            for (int i = 0; i < mockPaquetes.Count; i++)
+            {
+                mockPaquetes[i].Abort();
+                mockPaquetes.RemoveAt(i);
+            }
+        }
 
    
 
@@ -71,7 +72,7 @@ namespace Entidades
         {
             bool flag = false;
 
-            //no es nulo
+            //si no es nulo
             if (p != null)
             {
                 foreach (Paquete item in c.Paquetes)
@@ -79,7 +80,7 @@ namespace Entidades
                     if (item == p)
                     {
                         flag = true;
-                        string mensajeException = "El paquete con tracking ID:" + p.TrackingID + " ya fue enviado previamente.";
+                        string mensajeException = "El paquete con tracking ID: " + p.TrackingID + " ya fue enviado previamente.";
                         
                         TrackingIdRepetidoException excep = new TrackingIdRepetidoException(mensajeException);
                         throw excep; 

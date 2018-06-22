@@ -15,6 +15,7 @@ namespace Entidades
             bool flag = false;
             try
             {
+                //guardo la ruta y le doy al archivo el nombre que recibo
                 string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + archivo;
 
                 StreamWriter txt = new StreamWriter(ruta, true);

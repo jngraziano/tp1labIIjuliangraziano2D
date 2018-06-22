@@ -9,26 +9,7 @@ using System.Data;
 
 namespace Entidades
 {
-    #region Explicación usar Settings
-    /*
-     * Como predefinir Properties.Settings.Default.Loquesea y usarlo de default: 
-     * Settings - tp4 
-     * Click derecho 
-     * Propiedades
-     * Settings
-     * Cadena Sting User loquequiera 
-     * Accedo:
-     * Properties.Settings.Default.Cadena
-     * 
-     *  EJEMPLO EN GIT MOSTRADOENCLASE
-       
-     * Si quiero conectar por variable:
-        private static string Conector = "Data Source=.\\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True";
-        
-     */
-
-    #endregion
-
+    
 
     public static class PaqueteDAO
     {
@@ -43,7 +24,7 @@ namespace Entidades
 
             Comando = new SqlCommand();
             
-            Comando.CommandType = System.Data.CommandType.Text;// tipo de comando
+            Comando.CommandType = System.Data.CommandType.Text;
 
             Comando.Connection = Conexion; 
         }
@@ -56,15 +37,15 @@ namespace Entidades
         {
             bool flag = false;
 
-            //Creo el string query
+            //Creo la query
             string query = "INSERT INTO "+ TablaNombre +" (direccionEntrega,trackingID,alumno) VALUES(";
             query += "'" + p.DireccionEntrega + "','" + p.TrackingID + "', 'JulianGraziano')";
 
             try
             {
-                Comando.CommandText = query;// le paso la query
+                Comando.CommandText = query;
 
-                Conexion.Open();//abro la conexion
+                Conexion.Open();
 
                 int data = Comando.ExecuteNonQuery();
                 if (data == 1)
@@ -92,51 +73,7 @@ namespace Entidades
 
         }
 
-        #region Otras querys
-
-        #region ObtenerPaquete
-        //public static Paquete ObtenerPaquete(int ID)
-        //{
-        //    bool flag = false;
-        //    Paquete paque1 = null;
-
-
-        //    try
-        //    {
-        //      PaqueteDAO.Comando.CommandText = "select * from " + TablaNombre + " where (id = " + ID.toString() + ");";
-        //      PaqueteDAO.Conexion.Open();
-
-        //        SqlDataReader oDr = PaqueteDAO.Comando.ExecuteReader();
-
-        //        if (oDr.Read())
-        //        {
-        //            paque1 = new Paquete(oDr["DireccionEntrega"].ToString(), oDr["TrackingID"].ToString());
-                    
-        //        }
-        //        oDr.Close();
-        //        flag = true;
-
-        //    }
-        //    catch (Exception e)
-        //    {
-                
-        //        throw e;
-        //    }
-
-        //    return paque1;
-        //}
-
-        #endregion
-
-        #region Para updatear un campo
-        //EJEMPLO EN ESTE CASO:
-        //update dbo.Paquetes SET alumno= 'JulianGraziano' where id = 1;
-
-        #endregion
-
-
-        #endregion
-
+      
 
         #endregion
 

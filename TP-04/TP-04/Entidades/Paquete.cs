@@ -31,7 +31,7 @@ namespace Entidades
         private string direccionEntrega;
         private EEstado estado;
         private string trackingID;
-        public event DelegadoEstado EventoGenerado;// Evento del tipo del delegado
+        public event DelegadoEstado EventoGenerado;
         public Exception HayExcepcion = null;
 
 
@@ -54,20 +54,27 @@ namespace Entidades
         #region Metodos
         public void MockClicloDeVida()
         {
+            //Cambio de Ingresado a EnViaje
             Thread.Sleep(10000);
             this.Estado = EEstado.EnViaje;
-            //INFORMAR ESTADO MEDIANTE EVENTO
+
+            //informo estado mediante evento.
             EventArgs a = new EventArgs();
             this.EventoGenerado.Invoke(this, a);
+
+            //Cambio de EnViaje a Entregado
             Thread.Sleep(10000);
             this.Estado = EEstado.Entregado;
-            //INFORMAR ESTADO MEDIANTE EVENTO
+            
+            //informo estado mediante evento.
             this.EventoGenerado.Invoke(this, a);
 
-            bool resp = PaqueteDAO.Insertar(this);
-            if (resp == false)
+
+            //Guardo en BD
+            bool rta = PaqueteDAO.Insertar(this);
+            if (rta == false)
             {
-                Exception excep = new Exception("Se encontró un problema al querer guardan en la base de datos.");
+                Exception excep = new Exception("ERROR. No se pudo guardar en base de datos");
                 throw excep;
             }
         }

@@ -219,6 +219,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPpal";
             this.Text = "Correo UTN por Julian.Graziano.2D";
+            this.Load += new System.EventHandler(this.FrmPpal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
