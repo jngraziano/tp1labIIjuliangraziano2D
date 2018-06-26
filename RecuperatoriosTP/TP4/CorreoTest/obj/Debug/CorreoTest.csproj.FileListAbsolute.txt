@@ -1,0 +1,5 @@
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\CorreoTest.dll
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\CorreoTest.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.csprojResolveAssemblyReference.cache
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.dll
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.pdb
