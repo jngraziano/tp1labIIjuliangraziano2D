@@ -94,6 +94,15 @@ namespace Entidades
 
             //informo estado mediante evento.
             this.InformaEstado.Invoke(this, a);
+
+            try
+            {
+                PaqueteDAO.Insertar(this);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }   
         }
 
 

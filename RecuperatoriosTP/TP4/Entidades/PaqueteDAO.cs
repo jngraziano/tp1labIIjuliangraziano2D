@@ -27,8 +27,6 @@ namespace Entidades
             PaqueteDAO.Comando.CommandType = System.Data.CommandType.Text;
 
             PaqueteDAO.Comando.Connection = Conexion;
-
-            PaqueteDAO.Conexion.Open();
         }
 
         #endregion
@@ -37,66 +35,42 @@ namespace Entidades
 
         public static bool Insertar(Paquete p)
         {
-            bool flag = false;
-
             //Creo la query
             string query = "INSERT INTO "+ TablaNombre +" (direccionEntrega,trackingID,alumno) VALUES(";
             query += "'" + p.DireccionEntrega + "','" + p.TrackingID + "', 'JulianGraziano')";
 
-            try
-            {
-                //Comando.CommandText = query;
-
-                //Conexion.Open();
-
-                //int data = Comando.ExecuteNonQuery();
-                //if (data == 1)
-                //{
-                //    flag = true;
-                //}
-                //Conexion.Close();
-                
-                EjecutarNonQuery(query);
-                flag = true;
-
-
-
-
-
-            }
-            catch (SqlException excep)
-            {
-                flag = false;
-                throw excep;
-            }
-            finally
-            {
-                    Conexion.Close();
- 
-            }
-            
-            return flag;
+            return EjecutarNonQuery(query);
 
         }
 
         private static bool EjecutarNonQuery(string sql)
         {
+            bool flag = false;
             try
             {
                 // LE PASO LA INSTRUCCION SQL
                 PaqueteDAO.Comando.CommandText = sql;
 
+                // ABRO LA CONEXION A LA BD
+                PaqueteDAO.Conexion.Open();
+
                 // EJECUTO EL COMMAND
                 PaqueteDAO.Comando.ExecuteNonQuery();
 
-                return true;
+                flag = true;
             }
-            catch (Exception e)
+            catch (SqlException)
             {
-                throw e;
+                flag = false;
             }
+            finally
+            {
+                if (flag)
+                { PaqueteDAO.Conexion.Close(); }
+                   
+            }
+            return flag;
         }
-
       
 
         #endregion

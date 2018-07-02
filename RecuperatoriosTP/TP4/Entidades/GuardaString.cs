@@ -24,10 +24,10 @@ namespace Entidades
                                
                 flag = true;
             }
-            catch (ArgumentException)
+            catch (FileNotFoundException)
             {
-                string fallo = "Error en la ruta";
-                throw new ArgumentException(fallo);
+                string error = "Archivo no encontrado";
+                throw new FileNotFoundException(error);
 
             }
 

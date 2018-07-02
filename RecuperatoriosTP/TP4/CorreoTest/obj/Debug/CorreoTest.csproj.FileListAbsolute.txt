@@ -3,3 +3,7 @@ C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.csprojResolveAssemblyReference.cache
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.dll
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\obj\Debug\CorreoTest.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\Entidades.dll
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\MainCorreo.exe
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\Entidades.pdb
+C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\CorreoTest\bin\Debug\MainCorreo.pdb

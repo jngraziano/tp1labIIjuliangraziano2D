@@ -23,7 +23,7 @@ namespace CorreoTest
 
 
         /// <summary>
-        /// Testeo la utilizacion de la exepcion creada en el proyecto para evitar elementos iguales.
+        /// Tpruebo con el tema de los repetidos
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(TrackingIdRepetidoException), "Falla el test")]
@@ -33,7 +33,7 @@ namespace CorreoTest
             Correo c = new Correo();
 
             Paquete p1 = new Paquete("Jujuy", "111111");
-            Paquete p2 = new Paquete("Quilmes", "222222");
+            Paquete p2 = new Paquete("Usuhaia", "222222");
 
             //act
             c += p1;

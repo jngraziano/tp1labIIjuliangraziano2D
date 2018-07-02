@@ -113,6 +113,10 @@ namespace MainCorreo
                     {
                         //USO .ITEMS.ADD 
                         case Paquete.EEstado.Ingresado:
+                            //Limpio para el facil ingreso de otro paquete nuevo.
+                            txtDireccion.Clear();
+                            mtxtTrackingID.Clear();
+
                             lstEstadoIngresado.Items.Add(item);
                             break;
                         case Paquete.EEstado.EnViaje:
@@ -120,10 +124,6 @@ namespace MainCorreo
                             break;
                         case Paquete.EEstado.Entregado:
                             lstEstadoEntregado.Items.Add(item);
-
-                            txtDireccion.Clear();
-                            mtxtTrackingID.Clear();
-                      
                             break;
                         default:
                             break;
@@ -141,14 +141,12 @@ namespace MainCorreo
             if (elemento != null)
             {
                 rtbMostrar.Text = (elemento.MostrarDatos(elemento)).ToString();
-                                  //elemento.MostrarDatos(elemento);
-
-                elemento.MostrarDatos(elemento).Guardar("salida");
+     
             }
             try
             {
                 string texto = rtbMostrar.Text;
-                string nombreTxt = "InfoCorreo.txt";
+                string nombreTxt = "InfodeCorreo.txt";
                 
                                 
                 texto.Guardar(nombreTxt);
@@ -161,6 +159,7 @@ namespace MainCorreo
 
 
         #endregion
+
 
         #endregion
 
