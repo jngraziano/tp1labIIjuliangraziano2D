@@ -6,9 +6,13 @@ using MainCorreo;
 namespace CorreoTest
 {
     [TestClass]
+    
     public class UnitTest1
     {
-       
+        /// <summary>
+        /// Prueba con instaciar listapaquetes
+        /// </summary>
+        [TestMethod]
         public void InicializacionCorreoListPaquetes()
         {
             // arrange
@@ -23,10 +27,10 @@ namespace CorreoTest
 
 
         /// <summary>
-        /// Tpruebo con el tema de los repetidos
+        /// Prueba con el tema de los repetidos
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TrackingIdRepetidoException), "Falla el test")]
+        
         public void TestPaquetesNoRepetidos()
         {
             // arrange
