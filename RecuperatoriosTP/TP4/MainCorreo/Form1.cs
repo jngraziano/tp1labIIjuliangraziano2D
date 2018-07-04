@@ -28,6 +28,9 @@ namespace MainCorreo
             //Cargar el formulario en el centro de la pantalla.
             this.StartPosition = FormStartPosition.CenterScreen;
 
+
+           // lstEstadoEntregado.ContextMenuStrip = cmsListas;
+
             correo = new Correo();
         }
 
@@ -69,10 +72,9 @@ namespace MainCorreo
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
-        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
-        }
+        
+
+
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -159,6 +161,12 @@ namespace MainCorreo
 
 
         #endregion
+
+        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+        }
+
 
 
         #endregion

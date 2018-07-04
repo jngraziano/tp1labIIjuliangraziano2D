@@ -56,44 +56,27 @@ namespace Entidades
         #endregion
 
         #region Metodos
+
+        /// <summary>
+        /// Repito el ciclo y lo corto -> Estado=entregado
+        /// </summary>
         public void MockClicloDeVida()
         {
 
 
-            //while (true)
-            //{
-            //    InformaEstado.Invoke(this, EventArgs.Empty);
-            //    Thread.Sleep(10000);
-            //    if (this.Estado == EEstado.Entregado)
-            //    {
-            //        break;
-            //    }
-            //    this.Estado++;
-            //}
+            while (true)
+            {
+                InformaEstado.Invoke(this, EventArgs.Empty);
 
-            //try
-            //{
-            //    PaqueteDAO.Insertar(this);
-            //}
-            //catch (Exception e)
-            //{
-            //    throw e;
-            //}           
 
-            //Cambio de Ingresado a EnViaje
-            Thread.Sleep(10000);
-            this.Estado = EEstado.EnViaje;
 
-            //informo estado mediante evento.
-            EventArgs a = new EventArgs();
-            this.InformaEstado.Invoke(this, a);
-
-            //Cambio de EnViaje a Entregado
-            Thread.Sleep(10000);
-            this.Estado = EEstado.Entregado;
-
-            //informo estado mediante evento.
-            this.InformaEstado.Invoke(this, a);
+                Thread.Sleep(10000);
+                if (this.Estado == EEstado.Entregado)
+                {
+                    break;
+                }
+                this.Estado++;
+            }
 
             try
             {
@@ -102,7 +85,9 @@ namespace Entidades
             catch (Exception e)
             {
                 throw e;
-            }   
+            }           
+
+            
         }
 
 

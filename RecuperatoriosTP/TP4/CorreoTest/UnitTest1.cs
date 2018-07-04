@@ -16,10 +16,10 @@ namespace CorreoTest
         public void InicializacionCorreoListPaquetes()
         {
             // arrange
-            Correo c = new Correo();
+            Correo correo = new Correo();
 
             //act
-            object lista = c.Paquetes;
+            object lista = correo.Paquetes;
 
             //assert
             Assert.IsNotNull(lista);
