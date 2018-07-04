@@ -34,6 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstEstadoEntregado = new System.Windows.Forms.ListBox();
             this.cmsListas = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lstEstadoEnViaje = new System.Windows.Forms.ListBox();
             this.lstEstadoIngresado = new System.Windows.Forms.ListBox();
             this.lblEstadoIngresado = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.lvlTrackingID = new System.Windows.Forms.Label();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.cmsListas.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,7 +101,14 @@
             this.cmsListas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem});
             this.cmsListas.Name = "cmsListas";
-            this.cmsListas.Size = new System.Drawing.Size(153, 48);
+            this.cmsListas.Size = new System.Drawing.Size(116, 26);
+            // 
+            // mostrarToolStripMenuItem
+            // 
+            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.mostrarToolStripMenuItem.Text = "Mostrar";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
             // lstEstadoEnViaje
             // 
@@ -210,13 +217,6 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 11;
             // 
-            // mostrarToolStripMenuItem
-            // 
-            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mostrarToolStripMenuItem.Text = "Mostrar";
-            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
-            // 
             // FrmPpal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPpal";
             this.Text = "Correo UTN por Julian.Graziano.2D";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.cmsListas.ResumeLayout(false);

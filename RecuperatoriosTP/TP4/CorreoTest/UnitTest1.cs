@@ -30,14 +30,14 @@ namespace CorreoTest
         /// Prueba con el tema de los repetidos
         /// </summary>
         [TestMethod]
-        
+        [ExpectedException(typeof(TrackingIdRepetidoException), "Falla en el test ID repetido")]
         public void TestPaquetesNoRepetidos()
         {
             // arrange
             Correo c = new Correo();
 
             Paquete p1 = new Paquete("Jujuy", "111111");
-            Paquete p2 = new Paquete("Usuhaia", "222222");
+            Paquete p2 = new Paquete("Usuhaia", "111111");
 
             //act
             c += p1;

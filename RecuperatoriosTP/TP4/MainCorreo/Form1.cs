@@ -72,15 +72,14 @@ namespace MainCorreo
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
-        
-
-
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Cierro los hilos.
             this.correo.FinEntregas();
         }
+
+        
 
         #endregion
 
@@ -115,9 +114,7 @@ namespace MainCorreo
                     {
                         //USO .ITEMS.ADD 
                         case Paquete.EEstado.Ingresado:
-                            //Limpio para el facil ingreso de otro paquete nuevo.
-                            txtDireccion.Clear();
-                            mtxtTrackingID.Clear();
+                           
 
                             lstEstadoIngresado.Items.Add(item);
                             break;
@@ -126,6 +123,9 @@ namespace MainCorreo
                             break;
                         case Paquete.EEstado.Entregado:
                             lstEstadoEntregado.Items.Add(item);
+                            //Limpio para el facil ingreso de otro paquete nuevo.
+                            txtDireccion.Clear();
+                            mtxtTrackingID.Clear();
                             break;
                         default:
                             break;
@@ -170,6 +170,7 @@ namespace MainCorreo
 
 
         #endregion
+
 
 
     }

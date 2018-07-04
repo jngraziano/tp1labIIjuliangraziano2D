@@ -9,7 +9,7 @@ namespace Entidades
    
     public class TrackingIdRepetidoException : Exception
     {
-               
+
         public TrackingIdRepetidoException(string message) 
             : base(message) 
         {

@@ -64,7 +64,7 @@ namespace Entidades
         /// </summary>
         public void FinEntregas()
         {
-            foreach (var item in this.mockPaquetes)
+            foreach (Thread item in this.mockPaquetes)
             {
                 item.Abort();
             }

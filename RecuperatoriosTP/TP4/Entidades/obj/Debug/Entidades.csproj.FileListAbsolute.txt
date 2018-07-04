@@ -18,4 +18,3 @@ C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\Entidades\bin\D
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\Entidades\bin\Debug\Entidades.pdb
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\Entidades\obj\Debug\Entidades.dll
 C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\Entidades\obj\Debug\Entidades.pdb
-C:\Users\tano\Desktop\Tano10\falsacultad\tp\RecuperatoriosTP\TP4\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
